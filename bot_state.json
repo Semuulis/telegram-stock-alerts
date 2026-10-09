@@ -9,8 +9,13 @@
     "ETH-EUR"
   ],
   "disabled": [],
-  "offset": 485209736,
-  "reports_sent": {},
-  "alerts_sent": {},
+  "offset": 485209737,
+  "reports_sent": {
+    "us_close": "us_close:2026-10-10"
+  },
+  "alerts_sent": {
+    "BTC-EUR:2026-10-08": true,
+    "ETH-EUR:2026-10-08": true
+  },
   "commands_registered": true
 }
