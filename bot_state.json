@@ -1,21 +1,16 @@
 {
+  "version": 2,
   "active": [
-    "NVDA",
-    "TSLA",
-    "AAPL",
-    "MSFT",
-    "MSTR",
-    "BTC-USD",
-    "ETH-USD",
-    "VOO",
-    "QQQ",
     "IWDA.AS",
-    "VALL.AS",
-    "VWCE.DE",
-    "^VIX"
+    "MSTR",
+    "IS3N.DE",
+    "ASPI",
+    "BTC-EUR",
+    "ETH-EUR"
   ],
   "disabled": [],
-  "offset": 485209731,
-  "daily_date": "2026-10-09",
-  "last_alerts": {}
+  "offset": 485209732,
+  "reports_sent": {},
+  "alerts_sent": {},
+  "commands_registered": true
 }
