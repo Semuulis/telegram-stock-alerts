@@ -1,30 +1,46 @@
-name: Stock Monitor
+name: Telegram Market Monitor
 
 on:
   schedule:
-    - cron: "15 4 * * *"
-      timezone: "Europe/Vilnius"
-
+    - cron: "7,22,37,52 * * * *"  # approx every 15 minutes (UTC)
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: telegram-market-monitor
+  cancel-in-progress: false
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install packages
         run: pip install yfinance requests
 
-      - name: Run stock monitor
+      - name: Check Telegram and send daily report
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python stock_alert.py
+
+      - name: Save bot state (watchlist, processed messages, alerts)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot_state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Telegram bot state [skip ci]"
+            git push
+          fi
