@@ -1,0 +1,21 @@
+{
+  "active": [
+    "NVDA",
+    "TSLA",
+    "AAPL",
+    "MSFT",
+    "MSTR",
+    "BTC-USD",
+    "ETH-USD",
+    "VOO",
+    "QQQ",
+    "IWDA.AS",
+    "VALL.AS",
+    "VWCE.DE",
+    "^VIX"
+  ],
+  "disabled": [],
+  "offset": 485209717,
+  "daily_date": "2026-10-09",
+  "last_alerts": {}
+}
