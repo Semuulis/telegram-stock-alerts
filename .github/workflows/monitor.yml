@@ -1,47 +1,45 @@
-name: Telegram Market Monitor
+name: Telegram Market Monitor (GitHub fallback)
 
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *"
-
+    - cron: '7,22,37,52 * * * *'   # Check chat commands ~15 minutes
+    - cron: '30 8 * * *'
+      timezone: 'Europe/Vilnius'
+    - cron: '45 18 * * *'
+      timezone: 'Europe/Vilnius'
+    - cron: '15 0 * * *'
+      timezone: 'Europe/Vilnius'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: telegram-market-monitor
+  group: market-monitor
   cancel-in-progress: false
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           persist-credentials: true
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install packages
-        run: pip install yfinance requests
-
-      - name: Check Telegram and send daily report
+      - run: pip install -r requirements.txt
+      - name: Run Telegram bot once
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python stock_alert.py
-
-      - name: Save bot state (watchlist, processed messages, alerts)
+        run: python stock_alert.py --once
+      - name: Save chat offset, watchlist and report history
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add bot_state.json
+          git add -f bot_state.json
           if ! git diff --cached --quiet; then
-            git commit -m "Update Telegram bot state [skip ci]"
+            git commit -m "Update Telegram state [skip ci]"
             git push
           fi
