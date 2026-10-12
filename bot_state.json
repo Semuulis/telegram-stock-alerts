@@ -11,11 +11,12 @@
   "disabled": [],
   "offset": 485209740,
   "reports_sent": {
-    "us_close": "us_close:2026-10-12"
+    "us_close": "us_close:2026-10-13"
   },
   "alerts_sent": {
     "BTC-EUR:2026-10-08": true,
-    "ETH-EUR:2026-10-08": true
+    "ETH-EUR:2026-10-08": true,
+    "ASPI:2026-10-12": true
   },
   "commands_registered": true
 }
