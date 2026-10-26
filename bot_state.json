@@ -12,7 +12,7 @@
   "offset": 485209740,
   "reports_sent": {
     "us_close": "us_close:2026-10-25",
-    "europe_close": "europe_close:2026-10-24",
+    "europe_close": "europe_close:2026-10-26",
     "morning": "morning:2026-10-25"
   },
   "alerts_sent": {
@@ -23,7 +23,8 @@
     "IS3N.DE:2026-10-14": true,
     "IS3N.DE:2026-10-16": true,
     "IS3N.DE:2026-10-15": true,
-    "ASPI:2026-10-20": true
+    "ASPI:2026-10-20": true,
+    "BTC-EUR:2026-10-25": true
   },
   "commands_registered": true
 }
