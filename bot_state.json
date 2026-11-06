@@ -13,7 +13,7 @@
   "reports_sent": {
     "us_close": "us_close:2026-11-06",
     "europe_close": "europe_close:2026-11-04",
-    "morning": "morning:2026-10-30"
+    "morning": "morning:2026-11-06"
   },
   "alerts_sent": {
     "BTC-EUR:2026-10-08": true,
