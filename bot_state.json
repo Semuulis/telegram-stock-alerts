@@ -12,7 +12,7 @@
   "offset": 485209740,
   "reports_sent": {
     "us_close": "us_close:2026-11-19",
-    "europe_close": "europe_close:2026-11-15",
+    "europe_close": "europe_close:2026-11-19",
     "morning": "morning:2026-11-14"
   },
   "alerts_sent": {
@@ -37,7 +37,8 @@
     "IWDA.AS:2026-11-17": true,
     "MSTR:2026-11-18": true,
     "IS3N.DE:2026-11-17": true,
-    "ASPI:2026-11-18": true
+    "ASPI:2026-11-18": true,
+    "IWDA.AS:2026-11-19": true
   },
   "commands_registered": true
 }
