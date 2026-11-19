@@ -9,9 +9,9 @@
     "ETH-EUR"
   ],
   "disabled": [],
-  "offset": 485209740,
+  "offset": 485209741,
   "reports_sent": {
-    "us_close": "us_close:2026-11-19",
+    "us_close": "us_close:2026-11-20",
     "europe_close": "europe_close:2026-11-19",
     "morning": "morning:2026-11-14"
   },
@@ -38,7 +38,10 @@
     "MSTR:2026-11-18": true,
     "IS3N.DE:2026-11-17": true,
     "ASPI:2026-11-18": true,
-    "IWDA.AS:2026-11-19": true
+    "IWDA.AS:2026-11-19": true,
+    "IWDA.AS:2026-11-18": true,
+    "MSTR:2026-11-19": true,
+    "ASPI:2026-11-19": true
   },
   "commands_registered": true
 }
