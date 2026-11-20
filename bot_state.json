@@ -11,7 +11,7 @@
   "disabled": [],
   "offset": 485209741,
   "reports_sent": {
-    "us_close": "us_close:2026-11-20",
+    "us_close": "us_close:2026-11-21",
     "europe_close": "europe_close:2026-11-19",
     "morning": "morning:2026-11-20"
   },
@@ -41,7 +41,10 @@
     "IWDA.AS:2026-11-19": true,
     "IWDA.AS:2026-11-18": true,
     "MSTR:2026-11-19": true,
-    "ASPI:2026-11-19": true
+    "ASPI:2026-11-19": true,
+    "IWDA.AS:2026-11-20": true,
+    "MSTR:2026-11-20": true,
+    "ASPI:2026-11-20": true
   },
   "commands_registered": true
 }
