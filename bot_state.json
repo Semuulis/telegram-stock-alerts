@@ -11,7 +11,7 @@
   "disabled": [],
   "offset": 485209741,
   "reports_sent": {
-    "us_close": "us_close:2026-11-21",
+    "us_close": "us_close:2026-11-22",
     "europe_close": "europe_close:2026-11-19",
     "morning": "morning:2026-11-20"
   },
@@ -44,7 +44,9 @@
     "ASPI:2026-11-19": true,
     "IWDA.AS:2026-11-20": true,
     "MSTR:2026-11-20": true,
-    "ASPI:2026-11-20": true
+    "ASPI:2026-11-20": true,
+    "BTC-EUR:2026-11-20": true,
+    "ETH-EUR:2026-11-20": true
   },
   "commands_registered": true
 }
